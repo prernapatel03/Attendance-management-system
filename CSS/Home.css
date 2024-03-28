@@ -1,0 +1,318 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+  --white: #ffffff;
+  --lwhite: #EBEBED;
+  --red: #cf2e2e;
+  --dblack: #000000;
+  --silver: #C4C4C4;
+  --dwhite:#FFFBFA;
+  --dsilver :#BDB9B9;
+  --blue: #257de4;
+  --black: #342e37;
+  --iconColor: #d9d9d9;
+  --lgreen: #b3bfb8;
+}
+*{
+  font-family: Roboto;
+}
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: var(--lwhite);
+}
+
+nav {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  height: 65px;
+  align-items: center;
+  position: relative;
+}
+
+nav .img-div {
+  position: absolute;
+  left: 6%;
+
+}
+
+nav .img-div img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* height: 60px;
+  width: 60px; */
+}
+nav .list {
+  display: flex;
+  justify-content: center;
+  height: 65px;
+  align-items: center;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  width: auto;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+nav ul li a {
+  color: var(--dblack);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+nav ul li a.active {
+  border-bottom: 2.5px solid var(--red);
+}
+/* .active::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 24%;
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    height: 0.5px;
+    width: 50%;
+} */
+
+nav #menu-toggle {
+  display: none;
+}
+
+nav #menu-label {
+  display: none;
+}
+
+
+section .center-div {
+  text-align: center;
+}
+
+section .attendance-div{
+background-color: var(--dwhite);
+min-height: 320px;
+margin: 0 10px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+padding: 0px 30px 0 100px;  
+}
+
+section .attendance-sub-div{
+   padding-top:30px;
+   margin-right: 100px;
+}
+
+section .attendance-div .refresh-div{  
+  color: var(--blue);
+  float: right;
+  font-size: 10px;
+  width: auto;
+  margin-top: 10px;
+}
+
+section .attendance-div .refresh-div button
+{
+  border: none;
+  background-color: transparent;   
+  border-bottom: 2.5px solid var(--blue);
+  color: var(--blue);
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+section .attendance-div .select-div select {
+  float: left;
+background-color: var(--dsilver);
+border: none;
+outline: none;
+ text-align: center;
+ font-size: 16px;
+ display: block;
+ padding: 6px 40px 6px 11px;
+ width: auto; 
+ margin: 30px 0;
+ font-family: Roboto;
+}
+
+section .attendance-div .select-div  option {
+  border: none;
+ outline: none;
+}
+
+/*  container  */
+
+
+
+section .attendance-div .container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 13px;
+  row-gap: 0px;
+  width: 100%;
+  /* padding: 100px 0 0 0; */
+}
+section .attendance-div .container-item:nth-child(1) {
+  background-color: var(--black);
+  box-shadow: 0 8px 10px rgba(52, 46, 55, 0.6);
+  color: var(--dwhite);
+}
+
+section .attendance-div .container-item {
+  box-shadow: 0 8px 10px rgba(179, 191, 184, 0.6);
+  color: var(--dblack);
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align:center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--lgreen);
+  width: 150px;
+  height: 25%;
+  padding: 13px 10px;
+}
+
+
+section .attendance-div .container-number {
+  font-size: 10px;
+}
+section .attendance-div .container-item .container-text {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+
+
+section .attendance-div 
+.container-item input[type="checkbox"] {
+
+  height: 12px;
+  width: 12px;
+  border-radius: 0;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  border: 1px solid var(--black);
+  background-color : var(--iconColor);
+  border: 1px solid var(--dblack);
+}
+
+
+section .attendance-div 
+.container-item input[type="checkbox"]:checked:before{
+
+  content: "\2713";
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+section .attendance-div .container
+#check-active:checked:before {
+  box-shadow: 0 8px 10px rgba(52, 46, 55, 0.6);
+  color: var(--black);
+  background-color: rgba(217, 217, 217, 1);
+}
+
+/* media quiry */
+
+
+@media screen and (max-width: 600px) {
+
+  nav .img-div {
+    z-index:3;
+  }
+  nav .list {
+    width: 100%;
+  }
+  nav .list #menu {
+    text-align: center;
+    display: none;
+    background-color: var(--white);
+    margin-top: 300px;
+    width: 100%;
+    height: 100%;
+    padding: 300px 0;
+    z-index: 1;
+    transition: all 1.5s ease;
+  }
+
+  nav #menu-label{
+    display: block;
+    z-index: 3;
+  }
+  
+  #menu{
+    display: none;
+  }
+  nav #menu-label{
+    position: absolute;
+    right: 6%;
+
+  }
+  nav #menu-toggle:checked + #menu {
+
+    display: block;
+
+
+  }
+
+   section .attendance-div {
+    padding: 0px;    
+  }
+  section .attendance-div .attendance-sub-div .container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  section .attendance-div .container-item {
+    width: 65vw;
+  }
+  section .attendance-div {
+    padding-left: 60px;    
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .attendance-div .attendance-sub-div .container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  section .attendance-sub-div{
+    margin-right:50px;
+ }
+}
+@media screen and (max-width: 1000px) {
+  section .attendance-div .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  section .attendance-sub-div{
+    margin-right:50px;
+ }
+}
+
+
+

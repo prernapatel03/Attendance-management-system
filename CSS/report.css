@@ -1,0 +1,93 @@
+section .center-div input{
+    border: none;
+    border-bottom: 1px solid var(--dblack);
+    background-color: var(--dwhite);
+    width: 250px;  
+    padding: 6px 0px 6px 20px;
+    outline: none;
+} 
+
+::placeholder {
+    color: var(--dblack);
+    opacity: 1; 
+  }
+  
+  ::-ms-input-placeholder { 
+    color:var(--dblack);
+  }
+  section .center-div{
+    align-items: center;
+    display: flex;
+    justify-content:  center;
+    padding: 20px 0;
+}
+
+
+section .center-div .fa-search{
+         padding: 7.5px 0;
+         width: 25px;  
+         background-color: var(--dwhite);
+    border-bottom: 1px solid var(--dblack);
+    font-size: small;
+}
+
+/*  table  */
+
+section .attendance-div{
+    min-height: 338px;
+    padding: 0 100px;  
+    }
+    
+/* section .attendance-div{
+    min-height: 338px;
+} */
+
+ table {
+    margin-top: 20px;
+    width: 100%;
+    line-height: 25px;
+      font-size: 10px;
+  
+  }
+  table , th{
+      color: var(--dblack);
+      border-bottom: 2px solid #DBDBDF;
+
+  }
+  table, td {
+      border-bottom:  2px solid var(--lwhite);
+      text-align: center;
+      border-collapse: collapse;
+      font-weight: 500;
+    }
+
+    th:nth-child(1){
+        text-align: start;
+    }
+  
+    td:nth-child(1){
+        text-align: start;
+    }
+  
+  th, td {
+     padding: 0 25px;
+     width: auto;
+    
+  }
+  
+
+
+  @media screen and (max-width: 299px) { 
+    section .center-div input{
+
+        padding: 6px 0px 6px 20px;
+    } 
+
+  }
+
+  @media screen and (max-width: 142px) { 
+
+   section .attendance-div{
+        padding: 0 3px;
+    }
+  }

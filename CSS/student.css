@@ -1,0 +1,66 @@
+section .attendance-div .filter-div{
+    
+    color: #BDB9B9;
+    position: relative;
+    right: 7%;
+    align-items: center; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+section .attendance-div .filter-div .sub-filter {
+    margin-top: 8px;
+    color: var(--dblack);
+    font-size: 13px;
+    margin-right: 12px;
+    font-weight: 600;
+}
+
+
+
+section .attendance-div .filter-div .char {
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 8px;
+    margin-top: 10px;
+}
+
+section .attendance-div .filter-div .aero {
+    font-size: 20px;
+    margin-right: 16px; 
+    margin-top: 5px;
+}
+
+th:nth-child(1){
+    text-align: center;
+}
+
+td:nth-child(1){
+    text-align: center;
+}
+/*  media  */
+
+@media screen and (max-width: 175px) { 
+
+    section .attendance-div .filter-div{
+    position: absolute;
+    right:15%;
+    left: 3%;
+   
+}
+
+section .attendance-div  .sub-filter {
+        font-size:8px;
+    margin-right: 0;
+}
+section .attendance-div .filter-div  .char {
+    display: none;
+}
+
+section .attendance-div .filter-div  .aero {
+    margin: 0;
+    font-size: 10px;
+}
+}
